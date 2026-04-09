@@ -49,24 +49,7 @@ The system is divided into **5 layers**, each owned by one team member:
 
 ---
 
-## Project Structure
 
-```
-/
-├── README.md                   ← You are here (project overview)
-├── attack-layer/
-│   └── README.md               ← Person 1: EC2 attacker VM + RDS setup
-├── network-defense/
-│   └── README.md               ← Person 2: WAF + API Gateway + VPC + Shield
-├── detection-engine/
-│   └── README.md               ← Person 3: Lambda detection + GuardDuty
-├── logging-pipeline/
-│   └── README.md               ← Person 4: CloudWatch + S3 + Kinesis
-└── alerting-dashboard/
-    └── README.md               ← Person 5: SNS + Amplify + Security Hub
-```
-
----
 
 ## How the Attack Pipeline Works
 

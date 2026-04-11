@@ -1,0 +1,59 @@
+[
+    {
+        "action": [
+            {
+                "allow": [],
+                "block": [
+                    {
+                        "custom_response": []
+                    }
+                ],
+                "captcha": [],
+                "challenge": [],
+                "count": []
+            }
+        ],
+        "captcha_config": [],
+        "challenge_config": [],
+        "name": "sqli-rate-limit",
+        "override_action": [],
+        "priority": 3,
+        "rule_label": [],
+        "statement": [
+            {
+                "and_statement": [],
+                "asn_match_statement": [],
+                "byte_match_statement": [],
+                "geo_match_statement": [],
+                "ip_set_reference_statement": [],
+                "label_match_statement": [],
+                "managed_rule_group_statement": [],
+                "not_statement": [],
+                "or_statement": [],
+                "rate_based_statement": [
+                    {
+                        "aggregate_key_type": "IP",
+                        "custom_key": [],
+                        "evaluation_window_sec": 300,
+                        "forwarded_ip_config": [],
+                        "limit": 100,
+                        "scope_down_statement": []
+                    }
+                ],
+                "regex_match_statement": [],
+                "regex_pattern_set_reference_statement": [],
+                "rule_group_reference_statement": [],
+                "size_constraint_statement": [],
+                "sqli_match_statement": [],
+                "xss_match_statement": []
+            }
+        ],
+        "visibility_config": [
+            {
+                "cloudwatch_metrics_enabled": true,
+                "metric_name": "sqli-rate-limit-metric",
+                "sampled_requests_enabled": true
+            }
+        ]
+    }
+]

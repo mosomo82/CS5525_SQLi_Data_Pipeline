@@ -1,0 +1,106 @@
+[
+    {
+        "action": [],
+        "captcha_config": [],
+        "challenge_config": [],
+        "name": "AWSManagedRulesKnownBadInputsRuleSet",
+        "override_action": [
+            {
+                "count": [],
+                "none": [
+                    {}
+                ]
+            }
+        ],
+        "priority": 2,
+        "rule_label": [],
+        "statement": [
+            {
+                "and_statement": [],
+                "asn_match_statement": [],
+                "byte_match_statement": [],
+                "geo_match_statement": [],
+                "ip_set_reference_statement": [],
+                "label_match_statement": [],
+                "managed_rule_group_statement": [
+                    {
+                        "managed_rule_group_configs": [],
+                        "name": "AWSManagedRulesKnownBadInputsRuleSet",
+                        "rule_action_override": [],
+                        "scope_down_statement": [],
+                        "vendor_name": "AWS",
+                        "version": ""
+                    }
+                ],
+                "not_statement": [],
+                "or_statement": [],
+                "rate_based_statement": [],
+                "regex_match_statement": [],
+                "regex_pattern_set_reference_statement": [],
+                "rule_group_reference_statement": [],
+                "size_constraint_statement": [],
+                "sqli_match_statement": [],
+                "xss_match_statement": []
+            }
+        ],
+        "visibility_config": [
+            {
+                "cloudwatch_metrics_enabled": true,
+                "metric_name": "AWSManagedRulesKnownBadInputsRuleSetMetric",
+                "sampled_requests_enabled": true
+            }
+        ]
+    },
+    {
+        "action": [],
+        "captcha_config": [],
+        "challenge_config": [],
+        "name": "AWSManagedRulesSQLiRuleSet",
+        "override_action": [
+            {
+                "count": [],
+                "none": [
+                    {}
+                ]
+            }
+        ],
+        "priority": 1,
+        "rule_label": [],
+        "statement": [
+            {
+                "and_statement": [],
+                "asn_match_statement": [],
+                "byte_match_statement": [],
+                "geo_match_statement": [],
+                "ip_set_reference_statement": [],
+                "label_match_statement": [],
+                "managed_rule_group_statement": [
+                    {
+                        "managed_rule_group_configs": [],
+                        "name": "AWSManagedRulesSQLiRuleSet",
+                        "rule_action_override": [],
+                        "scope_down_statement": [],
+                        "vendor_name": "AWS",
+                        "version": ""
+                    }
+                ],
+                "not_statement": [],
+                "or_statement": [],
+                "rate_based_statement": [],
+                "regex_match_statement": [],
+                "regex_pattern_set_reference_statement": [],
+                "rule_group_reference_statement": [],
+                "size_constraint_statement": [],
+                "sqli_match_statement": [],
+                "xss_match_statement": []
+            }
+        ],
+        "visibility_config": [
+            {
+                "cloudwatch_metrics_enabled": true,
+                "metric_name": "AWSManagedRulesSQLiRuleSetMetric",
+                "sampled_requests_enabled": true
+            }
+        ]
+    }
+]

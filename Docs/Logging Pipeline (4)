@@ -80,21 +80,22 @@ S3 is AWS's object storage service — durable, scalable, and cost-effective.
 
 2. **Create Kinesis Data Stream:**
    - AWS Console → Kinesis → Create data stream
-   - Name: `sql-injection-log-stream`
+   - Name: `sqli-waf-logs`
+   - ARN: `arn:aws:kinesis:us-east-2:507041536990:stream/sqli-waf-logs`
    - Shards: 2 (supports ~2,000 records/sec)
 
 3. **Configure WAF to deliver logs to Kinesis:**
    - WAF Console → Web ACL → Logging → Enable
-   - Destination: Kinesis stream `sql-injection-log-stream`
+   - Destination: Kinesis stream `sqli-waf-logs`
 
 4. **Connect Kinesis to Lambda (Person 3):**
    - Lambda Console → Add trigger → Kinesis
-   - Stream: `sql-injection-log-stream`
+   - Stream: `sqli-waf-logs`
    - Batch size: 100 records
 
 5. **Set up Kinesis Firehose → S3:**
    - Create a Firehose delivery stream
-   - Source: Kinesis `sql-injection-log-stream`
+   - Source: Kinesis `sqli-waf-logs`
    - Destination: S3 bucket `sql-injection-logs-archive`
    - Compression: GZIP
    - Buffer: 60 seconds or 5 MB (whichever comes first)
@@ -154,7 +155,7 @@ Include in your section:
 
 ## Key Outputs / Deliverables
 
-- [ ] Kinesis Data Stream created (2 shards)
+- [x] Kinesis Data Stream created (`sqli-waf-logs`)
 - [ ] WAF logging to Kinesis configured
 - [ ] Kinesis → Lambda event source mapping active
 - [ ] Kinesis Firehose → S3 archiving confirmed
